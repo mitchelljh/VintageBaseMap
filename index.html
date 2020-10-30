@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vintage-Themed Base Map</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <!-- Stylesheet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.0/dist/leaflet.css"/>
+  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel='stylesheet'/>
+      <style>
+        html { height:100%;} body { height:100%; padding: 0; margin: 0;}
+        #map {width: 100%; height: 100%;}
+      </style>
+      <!-- JavaScript Libraries -->
+      <script src="http://cdn.leafletjs.com/leaflet/v1.7.0/leaflet.js"></script>
+      <!-- Mapbox gl js -->
+      <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+      <!-- Leaflet Mapbox JS -->
+      <script src="http://rawgit.com/mapbox/mapbox-gl-leaflet/master/leaflet-mapbox-gl.js"></script>
+  </head>
+  <body>
+    <div id='map'></div>
+      <script>
+      //1. create map object
+        var map = L.map('map').setView([48.863186, 2.339754], 12); //centered on Paris, France
+        L.tileLayer('https://api.mapbox.com/styles/v1/mitchelljh/ckgi9mqkx1ife19pbxzjlfhgo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibWl0Y2hlbGxqaCIsImEiOiJja2dhdGV2enIwYWN4MnNxdXJ5eGVxMm90In0.dGerELwNAeUSXbONQKVejg').addTo(map)
+
+        //mapbox_token = 'pk.eyJ1IjoibWl0Y2hlbGxqaCIsImEiOiJja2dhdGV2enIwYWN4MnNxdXJ5eGVxMm90In0.dGerELwNAeUSXbONQKVejg';
+        //2. add base map
+        //var gl = L.mapboxGL({
+          //accessToken: mapbox_token,
+          //style: 'assets/style.json',
+          //attribution: 'Created by Jessica Mitchell | <a href="assets/license.txt">Mapbox</a> | Inspiration from Mapbox Style <a href="https://studio.mapbox.com/styles/mitchelljh/ckgrzk5sz0x3619qglldgylrt/edit/#15.19/38.891725/-77.037855">Frank</a> & Vintage Color Palettes from <a href="https://coolors.co/palettes/trending/vintage">Coolors</a>'
+        //}).addTo(map);
+      </script>
+  </body>
+</html>
